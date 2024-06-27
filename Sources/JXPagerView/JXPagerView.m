@@ -104,9 +104,11 @@
         }
     }
     [self refreshTableHeaderView];
-    if (self.pinSectionHeaderVerticalOffset != 0 && self.mainTableView.contentOffset.y > self.pinSectionHeaderVerticalOffset) {
-        self.mainTableView.contentOffset = CGPointZero;
-    }
+//    if (self.pinSectionHeaderVerticalOffset != 0 && self.mainTableView.contentOffset.y > self.pinSectionHeaderVerticalOffset) {
+//        self.mainTableView.contentOffset = CGPointZero;
+//    }
+    self.mainTableView.contentOffset = CGPointMake(0, self.pinSectionHeaderVerticalOffset);
+
     [self.mainTableView reloadData];
     [self.listContainerView reloadData];
 }
